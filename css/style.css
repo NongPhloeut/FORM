@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    height: 100vh;
+    display: grid;
+    gap: 10px 10px;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,100px 150px 500px);
+    grid-template-areas:
+    "header header header header"
+    "card1 chard2 chard3 sidebar "
+    "main main main sidebar"
+    "fotter fotter fotter fotter";
+}
+.header{
+    grid-area: header;
+    background: deeppink;
+}
+.card1,.card2,.card3{
+    background: darkblue;
+}
+.sidebar{
+    grid-area: sidebar;
+    background: darkcyan;
+}
+.main{
+    grid-area: main;
+    background: darkgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fotter{
+    grid-area: fotter;
+    background: deepskyblue;
+}
+.formcontainer{
+    height: 80%;
+    background: darkorange;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.logo{
+  flex: 0.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form{
+    padding: 20px;
+}
+input{
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+input[type="text"],input[type="password"]{
+    width: 45%;
+}
+input[type="email"]{
+    box-sizing: border-box;
+    width: 95.5%;
+}
+img{
+    border-radius: 100%;
+    width: 20%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.button{
+    margin-top: 20px;
+    flex: 0.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    width: 40%;
+    padding: 10px;
+    background: deeppink;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
